@@ -1,0 +1,14 @@
+flowchart LR
+    browser["«device» Computador do funcionário<br/>«executionEnvironment» Navegador"]
+    subgraph host["«node» GitHub Codespaces — ambiente remoto"]
+      proxy["«executionEnvironment» Encaminhamento de porta<br/>URL HTTPS externa → porta interna 8000"]
+      subgraph container["«executionEnvironment» Container Python 3.12"]
+        server["«executionEnvironment» Gunicorn / Flask<br/>«artifact» app.py + backend + templates"]
+        database["«artifact» techservice.sqlite3<br/>Banco relacional SQLite"]
+      end
+      proxy -->|HTTP interno :8000| server
+      server -->|SQL / arquivo local| database
+    end
+    browser -->|HTTPS| proxy
+    repo["«node» GitHub<br/>«artifact» Repositório do projeto"]
+    repo -.->|Código para criar o ambiente| container
