@@ -44,3 +44,7 @@
 - [ ] Backups, auditoria por usuário e hospedagem permanente
 
 Os testes foram escritos, mas o pacote não contém evidência de execução. Não registrar aprovação sem executar.
+
+## Iteração 2 da construção
+
+Desenvolvimento da Iteração 2 realizado no branch iteracao2, criado a partir do branch principal (a tag v1 marca a entrega da Iteração 1).
