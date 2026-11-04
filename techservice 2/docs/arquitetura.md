@@ -24,3 +24,7 @@ O SQLite reside no sistema de arquivos do Codespace, fora do controle de versão
 Senhas verificadas por hash, sessão com segredo persistente, formulários protegidos contra CSRF, HTML com escape automático, consultas parametrizadas e mitigação de fórmulas na exportação CSV. Conta única de demonstração; sem perfis de autorização separados, sem proteção dedicada contra tentativas repetidas de login e sem política automatizada de backup. Não usar em produção nem inserir dados pessoais reais.
 
 Não há dependência de serviços externos para o front-end. A instalação inicial baixa dependências Python e a imagem do ambiente remoto.
+
+## Controle de versão
+
+Branch principal: main. A tag v1 marca a entrega da Iteração 1. O desenvolvimento da Iteração 2 ocorre no branch iteracao2 e é integrado ao main por merge.
